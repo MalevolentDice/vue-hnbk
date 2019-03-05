@@ -17,8 +17,6 @@
         <input type="button" v-model="person.kirchenmitglied" id="kirchenmitglied" @click="toggleKirche()">
         <label for="katholisch">Katholisch</label>
         <input type="button" v-model="person.Katholisch" id="Katholisch" @click="toggleKatholisch()">
-        <label for="westen">Lebt im westteil von Deutschland</label>
-        <input type="button" v-model="person.westen" id="westen" @click="toggleWesten()">
       </div>
 
       <h2>Gehalt und Arbeitgeber bezogene Daten</h2>
@@ -60,8 +58,7 @@ export default {
         age: 23,
         children: 0,
         kirchenmitglied: true,
-        Katholisch: false,
-        westen: true
+        Katholisch: false
       },
       verguetung: 888,
       vwlarbeitgeber: 40,
@@ -123,9 +120,6 @@ export default {
   methods: {
     toggleKirche() {
       this.person.kirchenmitglied = !this.person.kirchenmitglied;
-    },
-    toggleWesten() {
-      this.person.westen = !this.person.westen;
     },
     toggleKatholisch() {
       this.person.Katholisch = !this.person.Katholisch;
