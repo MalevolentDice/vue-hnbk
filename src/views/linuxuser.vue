@@ -64,7 +64,7 @@
         <div class="explanation">The user name</div>
         <div class="entry">x</div>
         <div class="explanation">Password: Generally password is not used, hence it is empty/blank. It can store a hashed password. This is useful to implement privileged groups.</div>
-        <div class="entry">1020</div>
+        <div class="entry">1021</div>
         <div class="explanation">Group ID</div>
         <div class="entry">jensenackles,deanwinchester,buffysummers</div>
         <div class="explanation">Group List: It is a list of user names of users who are members of the group. The user names, must be separated by commas.</div>
