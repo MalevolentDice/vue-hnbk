@@ -47,9 +47,9 @@
         <div class="explanation">Maximum number of days the password is valid (after that user is forced to change his/her password).</div>
         <div class="entry">7</div>
         <div class="explanation">Number of days before user gets warned about his password expiring.</div>
-        <div class="entry"> </div>
+        <div class="entry">_</div>
         <div class="explanation">Number of days after the password expires until the account gets disabled.</div>
-        <div class="entry"> </div>
+        <div class="entry">_</div>
         <div class="explanation">Days since Jan 1, 1970 that account is disabled i.e. an absolute date specifying when the login may no longer be used.</div>
       </div>
     </div>
@@ -89,17 +89,6 @@
   "group";
 }
 
-@media screen and (min-width: 900px){
-  .linuxuser {
-    grid-column: 1fr 1fr 1fr;
-    grid-template-areas:
-    ". userfiledescription ."
-    ". passwd ."
-    ". shadow ."
-    ". group .";
-  }
-}
-
 .userfiledescription {
   grid-area: userfiledescription;
 }
@@ -120,26 +109,32 @@
   max-width: 700px;
 }
 
-
 .passwd .example {
   display: grid;
   grid-template-areas: 
-  "entry       entry       entry       entry       entry       entry       entry"
-  "explanation explanation explanation explanation explanation explanation explanation";
+  "entry entry"
+  "entry entry"
+  "entry entry"
+  "entry entry"
+  "explanation explanation";
 }
 
 .shadow .example {
   display: grid;
   grid-template-areas: 
-  "entry       entry       entry       entry       entry       entry       entry       entry"
-  "explanation explanation explanation explanation explanation explanation explanation explanation";
+  "entry entry"
+  "entry entry"
+  "entry entry"
+  "entry entry"
+  "explanation explanation";
 }
 
 .group .example {
   display: grid;
   grid-template-areas: 
-  "entry       entry       entry       entry"
-  "explanation explanation explanation explanation";
+  "entry       entry       entry"
+  "entry       entry       entry"
+  "explanation explanation explanation";
 }
 
 .entry {
@@ -163,5 +158,35 @@
 
 .entry:hover+.explanation {
   opacity: 1;
+}
+
+@media screen and (min-width: 700px){
+  .linuxuser {
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas:
+    ". userfiledescription ."
+    ". passwd ."
+    ". shadow ."
+    ". group .";
+  }
+
+  .passwd .example {
+    grid-template-areas: 
+    "entry       entry       entry       entry       entry       entry       entry"
+    "explanation explanation explanation explanation explanation explanation explanation";
+  }
+  
+
+  .shadow .example {
+    grid-template-areas: 
+    "entry       entry       entry       entry       entry       entry       entry       entry"
+    "explanation explanation explanation explanation explanation explanation explanation explanation";
+  }
+
+  .group .example {
+    grid-template-areas: 
+    "entry       entry       entry       entry"
+    "explanation explanation explanation explanation";
+  }
 }
 </style>
