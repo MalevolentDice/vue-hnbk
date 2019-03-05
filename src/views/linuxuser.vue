@@ -61,7 +61,7 @@
       </div>
       <div class="example">
         <div class="entry">monsterhunter</div>
-        <div class="explanation">User name</div>
+        <div class="explanation">Group name</div>
         <div class="entry">x</div>
         <div class="explanation">Password: Generally password is not used but it can store a hashed password. This is useful for implementing privileged groups.</div>
         <div class="entry">1021</div>

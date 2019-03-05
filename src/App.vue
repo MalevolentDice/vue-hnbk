@@ -5,6 +5,7 @@
       <router-link to="/kontokorrentkredit">Kontokorrentkredit</router-link> |
       <router-link to="/festdarlehen">Festdarlehen</router-link> |
       <router-link to="/annuitaetendarlehen">Annuitätendarlehen</router-link> |
+      <router-link to="/entgeldabrechnung">Entgeldabrechnung</router-link> |
       <router-link to="/linuxuser">Linuxuser</router-link>
     </div>
     <router-view/>

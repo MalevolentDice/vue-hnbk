@@ -5,6 +5,7 @@ import KontoKurrentKredit from './views/kontokorrentkredit.vue'
 import Festdarlehen from './views/festdarlehen.vue'
 import Annuitaetendarlehen from './views/annuitaetendarlehen.vue'
 import Linuxuser from './views/linuxuser.vue'
+import Entgeldabrechnung from './views/entgeldabrechnung.vue'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/linuxuser',
       name: 'linuxuser',
       component: Linuxuser
+    },
+    {
+      path: '/entgeldabrechnung',
+      name: 'entgeldabrechnung',
+      component: Entgeldabrechnung
     }
   ]
 })
