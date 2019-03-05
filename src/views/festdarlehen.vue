@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: 'kontokorrentkredit',
+  name: 'festdarlehen',
   data: function() {
     return {
     kredit: 60000,

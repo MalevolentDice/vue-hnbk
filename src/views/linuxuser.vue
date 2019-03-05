@@ -74,7 +74,9 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    name: 'linuxuser',
+  };
 </script>
 
 <style scoped>
