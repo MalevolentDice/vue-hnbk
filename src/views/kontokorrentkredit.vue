@@ -58,19 +58,22 @@ export default {
   },
   computed: {
     sollzinscalc: function() {
-      return this.kredit * (this.sollzins/100) * (this.days/360);
+      return (this.kredit * (this.sollzins/100) * (this.days/360)).toFixed(2);
     },
     habezinscalc: function() {
-      return this.kontostand > 0 ? this.kontostand * (this.habezins/100) * (this.days/360): 0;
+      return (this.kontostand > 0 ? this.kontostand * (this.habezins/100) * (this.days/360): 0).toFixed(2);
     },
     kredit: function() {
-      return this.kontostand > 0 ? 0 : -this.kontostand;
+      return (this.kontostand > 0 ? 0 : -this.kontostand).toFixed(2);
     },
     kreditprovisioncalc: function() {
-      return (this.limit-this.kredit)*(this.kreditprovision/100);
+      return ((this.limit-this.kredit)*(this.kreditprovision/100)).toFixed(2);
     },
     total: function() {
-      return (this.sollzinscalc+this.habezinscalc+this.kreditprovisioncalc+this.umsatzprovision);
+      return (+this.sollzinscalc 
+              + +this.habezinscalc 
+              + +this.kreditprovisioncalc 
+              + +this.umsatzprovision).toFixed(2);
     }
   }
 }

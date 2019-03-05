@@ -55,22 +55,22 @@ export default {
   },
   computed: {
     payout: function() {
-      return this.kredit - (this.disagiocalc);
+      return (this.kredit - (this.disagiocalc)).toFixed(2);
     },
     disagiocalc: function() {
-      return this.disagio > 0 ? this.kredit * (this.disagio/100) : 0;
+      return (this.disagio > 0 ? this.kredit * (this.disagio/100) : 0).toFixed(2);
     },
     zinsencalc: function() {
-      return this.kredit * (this.zinsen/100) * (this.days/360);
+      return (this.kredit * (this.zinsen/100) * (this.days/360)).toFixed(2);
     },
     provisioncalc: function() {
-      return this.kredit * (this.kreditprovision/100)
+      return (this.kredit * (this.kreditprovision/100)).toFixed(2);
     },
     total: function() {
-      return this.disagiocalc 
-           + this.zinsencalc
-           + this.provisioncalc
-           + +this.spesen;
+      return (+this.disagiocalc 
+           + +this.zinsencalc
+           + +this.provisioncalc
+           + +this.spesen).toFixed(2);
     },
     effektivzinsen: function() {
       return (this.total * 100 * 360) / (this.payout * this.days);
