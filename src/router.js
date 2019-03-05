@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import KontoKurrentKredit from './views/kontokorrentkredit.vue'
-import Festdarlehen from './views/festdarlehen.vue'
-import Annuitaetendarlehen from './views/annuitaetendarlehen.vue'
-import Linuxuser from './views/linuxuser.vue'
-import Entgeldabrechnung from './views/entgeldabrechnung.vue'
+import KontoKorrentKredit from './views/KontoKorrentKredit.vue'
+import Festdarlehen from './views/FestDarlehen.vue'
+import Annuitaetendarlehen from './views/AnnuitaetenDarlehen.vue'
+import Linuxuser from './views/LinuxUser.vue'
+import Entgeldabrechnung from './views/EntgeldAbrechnung.vue'
 
 Vue.use(Router)
 
@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/kontokorrentkredit',
       name: 'kontokorrentkredit',
-      component: KontoKurrentKredit
+      component: KontoKorrentKredit
     },
     {
       path: '/festdarlehen',
