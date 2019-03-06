@@ -89,6 +89,16 @@ export default {
     "output"
   }
 
+  @media screen and (min-width: 710px){
+    .festdarlehen {
+      grid-template-columns: 1fr 700px 1fr;
+      grid-template-areas:
+      ". description ."
+      ". input ."
+      ". output ."
+    }
+  }
+
   .description {
     grid-area: description;
   }
