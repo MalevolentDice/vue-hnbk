@@ -136,4 +136,9 @@ export default {
     padding: 0;
     color: black;
   }
+
+  .wrapper input {
+    background: darkgray;
+    border: 2px solid black;
+  }
 </style>

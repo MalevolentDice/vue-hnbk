@@ -210,6 +210,15 @@ export default {
     text-align: center;
   }
 
+  .wrapper input {
+    background: darkgray;
+    border: 2px solid black;
+  }
+  .wrapper select {
+    background: darkgray;
+    border: 2px solid black;
+  }
+
   input[type="button"]:hover {
     background-color: rgb(180, 166, 166);
     cursor: pointer;
