@@ -36,7 +36,7 @@
         <label>Habezins</label><p>{{ habezinscalc }}</p>
         <label>Kreditprovision</label><p>{{ kreditprovisioncalc }}</p>
         <label>Umsatzprovision</label><p>{{ umsatzprovision }}</p>
-        <label>Gesamt</label><p>{{ total }}</p>
+        <label>Gesamte Kosten</label><p>{{ total }}</p>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ export default {
     },
     total: function() {
       return (+this.sollzinscalc 
-              + +this.habezinscalc 
+              - +this.habezinscalc 
               + +this.kreditprovisioncalc 
               + +this.umsatzprovision).toFixed(2);
     }
