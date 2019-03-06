@@ -9,6 +9,15 @@
     <div class="calculation">
       <h2>Personenbezogene Daten</h2>
       <div class="wrapper">
+        <label for="steuerklasse">Steuerklasse</label>
+        <select type="number" v-model="person.steuerklasse" id="steuerklasse">
+          <option value="1">Steuerklasse 1</option>
+          <option value="2">Steuerklasse 2</option>
+          <option value="3">Steuerklasse 3</option>
+          <option value="4">Steuerklasse 4</option>
+          <option value="5">Steuerklasse 5</option>
+          <option value="6">Steuerklasse 6</option>
+        </select>
         <label for="age">Alter</label>
         <input type="number" v-model="person.age" id="age">
         <label for="person.children">Kinder</label>
@@ -17,6 +26,8 @@
         <input type="button" v-model="person.kirchenmitglied" id="kirchenmitglied" @click="toggleKirche()">
         <label for="katholisch">Katholisch</label>
         <input type="button" v-model="person.Katholisch" id="Katholisch" @click="toggleKatholisch()">
+        <label for="westen">Lebt im Westen von Deutschland</label>
+        <input type="button" v-model="person.westen" id="westen" @click="toggleWesten()">
       </div>
 
       <h2>Gehalt und Arbeitgeber bezogene Daten</h2>
@@ -58,7 +69,9 @@ export default {
         age: 23,
         children: 0,
         kirchenmitglied: true,
-        Katholisch: false
+        katholisch: false,
+        steuerklasse: 1,
+        westen: true
       },
       verguetung: 888,
       vwlarbeitgeber: 40,
@@ -83,7 +96,7 @@ export default {
     },
     kirchensteuerprozent: function() {
       if(this.person.kirchenmitglied){
-        return this.person.Katholisch ? 8 : 9;
+        return this.person.katholisch ? 8 : 9;
       }
       return 0;
     },
@@ -91,7 +104,8 @@ export default {
       return (this.person.kirchenmitglied ? this.lohnsteuer*(this.kirchensteuerprozent/100) : 0).toFixed(2);
     },
     krankenversicherung: function() {
-      return (this.steuerbrutto*0.073).toFixed(2);
+      let calculationBase = Math.min(this.beitragsbemessungsgrenze_krankenversicherung, this.steuerbrutto);
+      return (calculationBase*0.073).toFixed(2);
     },
     pflegeversicherung: function() {
       return (this.steuerbrutto * (this.pflegeversicherungprozent/100)).toFixed(2);
@@ -115,6 +129,18 @@ export default {
     auszahlungsbetrag: function() {
       return (+this.nettoentgelt
               - +this.vwlarbeitnehmer).toFixed(2)
+    },
+    beitragsbemessungsgrenze_krankenversicherung: function() {
+      return 4425;
+    },
+    beitragsbemessungsgrenze_pflegeversicherung: function() {
+      return 4425;
+    },
+    beitragsbemessungsgrenze_rentenversicherung: function() {
+      return this.person.westen ? 6500 : 5800;
+    },
+    beitragsbemessungsgrenze_arbeitslosenversichrung: function() {
+      return this.person.westen ? 6500 : 5800;
     }
   },
   methods: {
@@ -122,7 +148,10 @@ export default {
       this.person.kirchenmitglied = !this.person.kirchenmitglied;
     },
     toggleKatholisch() {
-      this.person.Katholisch = !this.person.Katholisch;
+      this.person.katholisch = !this.person.katholisch;
+    },
+    toggleWesten() {
+      this.person.katholisch = !this.person.katholisch;
     }
   }
 }
@@ -151,7 +180,7 @@ export default {
     justify-items: center;
   }
 
-  .wrapper label, .wrapper input, .wrapper p, .wrapper h4 {
+  .wrapper label, .wrapper input, .wrapper p, .wrapper h4, .wrapper select {
     display: block;
     width: 100%;
     background: rgb(213, 214, 214);
