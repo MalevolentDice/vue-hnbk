@@ -20,7 +20,7 @@
         </select>
         <label for="age">Alter</label>
         <input type="number" v-model="person.age" id="age">
-        <label for="person.children">Kinder</label>
+        <label for="children">Kinder</label>
         <input type="number" v-model="person.children" id="children">
         <label for="kirchenmitglied">Kirchensteuer</label>
         <input type="button" v-model="person.kirchenmitglied" id="kirchenmitglied" @click="toggleKirche()">
@@ -28,6 +28,8 @@
         <input type="button" v-model="person.katholisch" id="Katholisch" @click="toggleKatholisch()">
         <label for="westen">Lebt im Westen von Deutschland</label>
         <input type="button" v-model="person.westen" id="westen" @click="toggleWesten()">
+        <label for="kvzuschlaginprozent">Krankenversicherungszuschlag in %</label>
+        <input type="number" v-model="person.kvzuschlaginprozent" id="kvzuschlaginprozent" min="0.00" step="0.01">
       </div>
 
       <h2>Gehalt und Arbeitgeber bezogene Daten</h2>
@@ -47,7 +49,7 @@
         <label for="soli">- Solidaritätszuschlag (5,5% von der Lohnsteuer)</label><p>{{ soli }}</p>
 
         <label for="kirchensteuer">- Kirchensteuer ({{ kirchensteuerprozent }}%)</label><p>{{ kirchensteuer }}</p>
-        <label for="krankenversicherung">- Krankenversicherung (7,3%)</label><p>{{ krankenversicherung }}</p>
+        <label for="krankenversicherung">- Krankenversicherung ({{ krankenversicherungprozent }}%)</label><p>{{ krankenversicherung }}</p>
         <label for="pflegeversicherung">- Pflegeversicherung ({{ pflegeversicherungprozent }}%)</label><p>{{ pflegeversicherung }}</p>
         <label for="rentenversicherung">- Rentenversicherung (9,3%)</label><p>{{ rentenversicherung }}</p>
         <label for="arbeitslosenversicherung">- Arbeitslosenversicherung (1,5%)</label><p>{{ arbeitslosenversicherung }}</p>
@@ -71,7 +73,8 @@ export default {
         kirchenmitglied: true,
         katholisch: false,
         steuerklasse: 1,
-        westen: true
+        westen: true,
+        kvzuschlaginprozent: 0
       },
       verguetung: 888,
       vwlarbeitgeber: 40,
@@ -88,8 +91,8 @@ export default {
              + +this.vwlarbeitgeber).toFixed(2);
     },
     hasToPaySoli: function() {
-      // TODO Lohnsteuerklasse
-      return this.lohnsteuer >= 81 ? true : false;
+      let limit = (this.person.steuerklasse == 3) ? 162 : 81;
+      return this.lohnsteuer > limit;
     },
     soli: function() {
       return this.hasToPaySoli ? (+this.lohnsteuer * 0.055).toFixed(2) : 0;
@@ -100,12 +103,16 @@ export default {
       }
       return 0;
     },
+    krankenversicherungprozent: function() {
+      return (7.3 
+            + +this.person.kvzuschlaginprozent).toFixed(2);
+    },
     kirchensteuer: function() {
       return (this.person.kirchenmitglied ? this.lohnsteuer*(this.kirchensteuerprozent/100) : 0).toFixed(2);
     },
     krankenversicherung: function() {
       let calculationBase = Math.min(this.beitragsbemessungsgrenze_krankenversicherung, this.steuerbrutto);
-      return (calculationBase*0.073).toFixed(2);
+      return (calculationBase*(0.073+(this.person.kvzuschlaginprozent/100))).toFixed(2);
     },
     pflegeversicherung: function() {
       let calculationBase = Math.min(this.beitragsbemessungsgrenze_pflegeversicherung, this.steuerbrutto);
