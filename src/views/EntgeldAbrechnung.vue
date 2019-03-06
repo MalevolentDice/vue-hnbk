@@ -25,7 +25,7 @@
         <label for="kirchenmitglied">Kirchensteuer</label>
         <input type="button" v-model="person.kirchenmitglied" id="kirchenmitglied" @click="toggleKirche()">
         <label for="katholisch">Katholisch</label>
-        <input type="button" v-model="person.Katholisch" id="Katholisch" @click="toggleKatholisch()">
+        <input type="button" v-model="person.katholisch" id="Katholisch" @click="toggleKatholisch()">
         <label for="westen">Lebt im Westen von Deutschland</label>
         <input type="button" v-model="person.westen" id="westen" @click="toggleWesten()">
       </div>
@@ -108,13 +108,16 @@ export default {
       return (calculationBase*0.073).toFixed(2);
     },
     pflegeversicherung: function() {
-      return (this.steuerbrutto * (this.pflegeversicherungprozent/100)).toFixed(2);
+      let calculationBase = Math.min(this.beitragsbemessungsgrenze_pflegeversicherung, this.steuerbrutto);
+      return (calculationBase*(this.pflegeversicherungprozent/100)).toFixed(2);
     },
     rentenversicherung: function() {
-      return (this.steuerbrutto*0.093).toFixed(2);
+      let calculationBase = Math.min(this.beitragsbemessungsgrenze_rentenversicherung, this.steuerbrutto);
+      return (calculationBase*0.093).toFixed(2);
     },
     arbeitslosenversicherung: function() {
-      return (this.steuerbrutto*0.015).toFixed(2);
+      let calculationBase = Math.min(this.beitragsbemessungsgrenze_arbeitslosenversichrung, this.steuerbrutto);
+      return (calculationBase*0.015).toFixed(2);
     },
     nettoentgelt: function() {
       return (+this.steuerbrutto
@@ -151,7 +154,7 @@ export default {
       this.person.katholisch = !this.person.katholisch;
     },
     toggleWesten() {
-      this.person.katholisch = !this.person.katholisch;
+      this.person.westen = !this.person.westen;
     }
   }
 }
@@ -164,6 +167,15 @@ export default {
     grid-template-areas:
     "description"
     "calculation"
+  }
+
+  @media screen and (min-width: 710px){
+    .entgeldabrechnung {
+      grid-template-columns: 1fr 700px 1fr;
+      grid-template-areas:
+      ". description ."
+      ". calculation ."
+    }
   }
 
   .description {

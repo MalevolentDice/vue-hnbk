@@ -21,7 +21,7 @@
     <div class="outputs">
       <h2>Outputs</h2>
       <div class="wrapper">
-        <table style="width:100%">
+        <table>
           <tr>
             <th>Jahr</th>
             <th>Schuld zu Beginn des Jahres</th>
@@ -93,6 +93,15 @@ export default {
     "input"
     "output"
   }
+  @media screen and (min-width: 710px){
+    .annuitaetendarlehen {
+      grid-template-columns: 1fr 700px 1fr;
+      grid-template-areas:
+      ". description ."
+      ". input ."
+      ". output ."
+    }
+  }
 
   .description {
     grid-area: description;
@@ -104,6 +113,7 @@ export default {
 
   .outputs {
     grid-area: output;
+    overflow-x: auto;
   }
 
   .wrapper {
