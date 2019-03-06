@@ -2,8 +2,9 @@
   <div class="annuitaetendarlehen">
     <div class="description">
       <h1>Das Annuitätendarlehen</h1>
-      <p>Beim Annuitätendarlehen wird jeden Monat der Selbe Betrag vom Schuldner bezahlt.</p>
+      <p>Beim Annuitätendarlehen wird jedes Jahr die Selbe Annuität vom Schuldner bezahlt.</p>
       <p>Da die Schuld und somit die Zinsen mit jeder Zahlung sinken, steigt der Tilgungsanteil der Annuität stetig an.</p>
+      <p>In unserem Beispiel wird jährlich abgerechnet, in der wirtschaft ist eine monatliche Verrechnung üblicher.</p>
     </div>
 
     <div class="inputs">
@@ -20,7 +21,7 @@
     
     <div class="outputs">
       <h2>Outputs</h2>
-      <div class="wrapper">
+      <div class="wrapper table-wrapper">
         <table>
           <tr>
             <th>Jahr</th>
@@ -120,6 +121,10 @@ export default {
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
+  }
+
+  .table-wrapper {
+    grid-template-columns: 1fr;
   }
 
   .wrapper label, .wrapper input, .wrapper p {

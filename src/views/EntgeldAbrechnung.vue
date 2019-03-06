@@ -3,7 +3,7 @@
     <div class="description">
       <h1>Die Entgeldabrechnung</h1>
       <p>Berechnet den Auszahlungsbetrag pro Monat anhand des Bruttoeinkommens</p>
-      <p><u>Berücksichtigt noch keine Beitragsbemessungsgrenze, Lohnsteuer oder Lohnsteuerklassen</u></p>
+      <p><u>Berücksichtigt noch keine <strike>Beitragsbemessungsgrenzen</strike>, Lohnsteuer (Bitte selbst auslesen und eintragen) oder Lohnsteuerklassen</u></p>
     </div>
 
     <div class="calculation">
