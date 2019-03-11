@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import KontoKorrentKredit from './views/KontoKorrentKredit.vue'
-import Festdarlehen from './views/FestDarlehen.vue'
-import Annuitaetendarlehen from './views/AnnuitaetenDarlehen.vue'
-import Linuxuser from './views/LinuxUser.vue'
-import Entgeldabrechnung from './views/EntgeldAbrechnung.vue'
+const KontoKorrentKredit = () => import('./views/KontoKorrentKredit.vue')
+const Festdarlehen = () => import('./views/FestDarlehen.vue')
+const Annuitaetendarlehen = () => import('./views/AnnuitaetenDarlehen.vue')
+const Linuxuser = () => import('./views/LinuxUser.vue')
+const Entgeldabrechnung = () => import('./views/EntgeldAbrechnung.vue')
 
 Vue.use(Router)
 
