@@ -6,6 +6,7 @@ const Festdarlehen = () => import('./views/FestDarlehen.vue')
 const Annuitaetendarlehen = () => import('./views/AnnuitaetenDarlehen.vue')
 const Linuxuser = () => import('./views/LinuxUser.vue')
 const Entgeldabrechnung = () => import('./views/EntgeldAbrechnung.vue')
+const Sampling = () => import('./views/Sampling.vue')
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/entgeldabrechnung',
       name: 'entgeldabrechnung',
       component: Entgeldabrechnung
+    },
+    {
+      path: '/sampling',
+      name: 'sampling',
+      component: Sampling
     }
   ]
 })

@@ -6,7 +6,8 @@
       <router-link to="/festdarlehen">Festdarlehen</router-link> |
       <router-link to="/annuitaetendarlehen">Annuitätendarlehen</router-link> |
       <router-link to="/entgeldabrechnung">Entgeldabrechnung</router-link> |
-      <router-link to="/linuxuser">Linuxuser</router-link>
+      <router-link to="/linuxuser">Linuxuser</router-link> |
+      <router-link to="/sampling">Sampling</router-link>
     </div>
     <router-view/>
   </div>
