@@ -25,6 +25,8 @@
         <input type="button" class="button" @click="toggleMono()" v-model="isMono">
         <label>Dauer in Sekunden</label>
         <input v-model="time">
+        <label>Komprimierung auf x%</label>
+        <input v-model="compression">
       </div>
 
       <h3>Berechnung</h3>
@@ -38,6 +40,7 @@
         <label>Gesamtgröße in byte</label>
         <p>{{totalSizeInByte}} byte</p>
       </div>
+      <div class="spacer"></div>
     </div>
   </div>
 </template>
@@ -52,12 +55,18 @@ export default {
       isMono: false,
       samplingrate: 44100,
       samplingdepth: 16,
-      time: 210
+      time: 210,
+      compression: 20
     };
   },
   computed: {
     perSecond: function() {
-      return this.samplingrate * this.samplingdepth * this.canals;
+      return (
+        this.samplingrate *
+        this.samplingdepth *
+        this.canals *
+        (+this.compression / 100)
+      );
     },
     perSecondInByte: function() {
       return this.perSecond / 8;
@@ -84,7 +93,8 @@ export default {
   display: grid;
   grid-template-areas:
     "description"
-    "content";
+    "content"
+    "s";
 }
 
 @media screen and (min-width: 710px) {
@@ -92,8 +102,14 @@ export default {
     grid-template-columns: 1fr 700px 1fr;
     grid-template-areas:
       ". description ."
-      ". content .";
+      ". content ."
+      "s s s";
   }
+}
+
+.spacer {
+  min-height: 48px;
+  grid-area: s;
 }
 
 .description {
@@ -128,7 +144,8 @@ export default {
 .wrapper label,
 .wrapper input,
 .wrapper p {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   background: rgb(213, 214, 214);
   border: 2px solid rgb(110, 110, 110);
@@ -136,6 +153,7 @@ export default {
   padding: 0;
   color: black;
   text-align: left;
+  min-height: 48px;
 }
 
 .wrapper input {
