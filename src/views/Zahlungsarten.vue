@@ -1,9 +1,17 @@
 <template>
   <div class="zahlungsarten">
     <div class="selector">
-      <button class="button button--ec" @click="selectEC">EC</button>
-      <button class="button button--elv" @click="selectELV">ELV</button>
-      <button class="button button--kredit" @click="selectKredit">Kreditkarte</button>
+      <button class="button button--ec" @click="selectEC" :class="{ 'button--selected': showEC }">EC</button>
+      <button
+        class="button button--elv"
+        @click="selectELV"
+        :class="{ 'button--selected': showElv }"
+      >ELV</button>
+      <button
+        class="button button--kredit"
+        @click="selectKredit"
+        :class="{ 'button--selected': showKredit }"
+      >Kreditkarte</button>
     </div>
     <div class="content content--ec" :class="{ show: showEC }">
       <h1>Electronic Cash</h1>
@@ -129,6 +137,17 @@ export default {
 
 .show {
   opacity: 1;
+}
+
+.button {
+  background-color: lightgray;
+  border: 3px solid gray;
+  height: 48px;
+  width: 33.33%;
+}
+
+.button--selected {
+  background-color: #86eebf;
 }
 
 @media screen and (min-width: 710px) {
