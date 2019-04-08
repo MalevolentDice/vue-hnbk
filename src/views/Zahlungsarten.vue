@@ -1,22 +1,24 @@
 <template>
   <div class="zahlungsarten">
     <div class="selector">
-      <button class="button button--ec">EC</button>
-      <button class="button button--elv">ELV</button>
-      <button class="button button--kredit">Kreditkarte</button>
+      <button class="button button--ec" @click="selectEC">EC</button>
+      <button class="button button--elv" @click="selectELV">ELV</button>
+      <button class="button button--kredit" @click="selectKredit">Kreditkarte</button>
     </div>
-    <div class="content content--ec">EC</div>
-    <div class="content content--elv">ELV</div>
-    <div class="content content--kredit">Kreditkarte</div>
+    <div class="content content--ec" :class="{ show: showEC }">EC</div>
+    <div class="content content--elv" :class="{ show: showElv }">ELV</div>
+    <div class="content content--kredit" :class="{ show: showKredit }">Kreditkarte</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "sampling",
+  name: "zahlungsarten",
   data: function() {
     return {
-      test: 0
+      showEC: true,
+      showElv: false,
+      showKredit: false
     };
   },
   computed: {
@@ -25,8 +27,20 @@ export default {
     }
   },
   methods: {
-    abc: function() {
-      // do stuff
+    selectEC: function() {
+      this.showEC = true;
+      this.showElv = false;
+      this.showKredit = false;
+    },
+    selectELV: function() {
+      this.showEC = false;
+      this.showElv = true;
+      this.showKredit = false;
+    },
+    selectKredit: function() {
+      this.showEC = false;
+      this.showElv = false;
+      this.showKredit = true;
     }
   }
 };
