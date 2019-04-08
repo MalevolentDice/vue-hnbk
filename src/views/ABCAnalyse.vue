@@ -72,34 +72,9 @@ export default {
   grid-template-areas:
     "a"
     "b"
-    "c";
-}
-
-@media screen and (min-width: 710px) {
-  .abcanalyse {
-    grid-template-columns: 1fr 700px 1fr;
-    grid-template-areas:
-      ". description ."
-      ". content ."
-      "s s s";
-  }
-
-  .content {
-    grid-template-areas:
-      "a   b   c"
-      "bar bar bar"
-      "adv adv adv";
-    margin: 0;
-  }
-}
-
-.description {
-  grid-area: description;
-}
-
-.abcclass {
-  background-color: lightgray;
-  border: 2px solid gray;
+    "c"
+    "bar"
+    "adv";
 }
 
 .abcbar {
@@ -126,11 +101,38 @@ export default {
   background-color: green;
 }
 
+.description {
+  grid-area: description;
+}
+
+.abcclass {
+  background-color: lightgray;
+  border: 2px solid gray;
+}
+
 .advantages {
   grid-area: adv;
 }
 
 .advantages ul {
   text-align: left;
+}
+
+@media screen and (min-width: 710px) {
+  .abcanalyse {
+    grid-template-columns: 1fr 700px 1fr;
+    grid-template-areas:
+      ". description ."
+      ". content ."
+      "s s s";
+  }
+
+  .content {
+    grid-template-areas:
+      "a   b   c"
+      "bar bar bar"
+      "adv adv adv";
+    margin: 0;
+  }
 }
 </style>
