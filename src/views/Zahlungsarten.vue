@@ -76,8 +76,4 @@ export default {
     grid-area: kredit;
   }
 }
-
-.elv {
-  grid-area: elv;
-}
 </style>
