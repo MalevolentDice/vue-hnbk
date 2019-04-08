@@ -8,7 +8,8 @@
       <router-link to="/entgeldabrechnung">Entgeldabrechnung</router-link>|
       <router-link to="/linuxuser">Linuxuser</router-link>|
       <router-link to="/sampling">Sampling</router-link>|
-      <router-link to="/abcanalyse">ABCAnalyse</router-link>
+      <router-link to="/abcanalyse">ABCAnalyse</router-link>|
+      <router-link to="/zahlungsarten">Zahlungsarten</router-link>
     </div>
     <router-view/>
   </div>

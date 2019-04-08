@@ -8,6 +8,7 @@ const Linuxuser = () => import("./views/LinuxUser.vue");
 const Entgeldabrechnung = () => import("./views/EntgeldAbrechnung.vue");
 const Sampling = () => import("./views/Sampling.vue");
 const ABCAnalyse = () => import("./views/ABCAnalyse.vue");
+const Zahlungsarten = () => import("./views/Zahlungsarten.vue");
 
 Vue.use(Router);
 
@@ -54,6 +55,11 @@ export default new Router({
       path: "/abcanalyse",
       name: "abcanalyse",
       component: ABCAnalyse
+    },
+    {
+      path: "/zahlungsarten",
+      name: "zahlungsarten",
+      component: Zahlungsarten
     }
   ]
 });
