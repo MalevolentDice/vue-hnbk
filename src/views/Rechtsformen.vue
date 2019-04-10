@@ -60,19 +60,46 @@
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--gbr"
           >Gesellschaft bürgerlichen Rechts (GbR)</h3>
-          <div class="gesellschafts-form__description gesellschafts-form__description--gbr">Desc</div>
+          <div class="gesellschafts-form__description gesellschafts-form__description--gbr">
+            Desc
+            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gbr">Gruendung</div>
+            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gbr">Vertrag</div>
+            <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--gbr">Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gbr"
+            >Führung</div>
+            <div class="gesellschafts-form__haftung gesellschafts-form__haftung--gbr">Haftung</div>
+          </div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--ohg">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--ohg"
           >Offene Handelsgesellschaft (OHG)</h3>
-          <div class="gesellschafts-form__description gesellschafts-form__description--ohg">Desc</div>
+          <div class="gesellschafts-form__description gesellschafts-form__description--ohg">
+            Desc
+            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--ohg">Gruendung</div>
+            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ohg">Vertrag</div>
+            <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--ohg">Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--ohg"
+            >Führung</div>
+            <div class="gesellschafts-form__haftung gesellschafts-form__haftung--ohg">Haftung</div>
+          </div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--kg">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--kg"
           >Kommanditgesellschaft (KG)</h3>
-          <div class="gesellschafts-form__description gesellschafts-form__description--kg">Desc</div>
+          <div class="gesellschafts-form__description gesellschafts-form__description--kg">
+            Desc
+            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--kg">Gruendung</div>
+            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--kg">Vertrag</div>
+            <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--kg">Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--kg"
+            >Führung</div>
+            <div class="gesellschafts-form__haftung gesellschafts-form__haftung--kg">Haftung</div>
+          </div>
         </div>
       </div>
 
@@ -85,13 +112,31 @@
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--gmbh"
           >Gesellschaft mit beschränkter Haftung (GmbH)</h3>
-          <div class="gesellschafts-form__description gesellschafts-form__description--gmbh">Desc</div>
+          <div class="gesellschafts-form__description gesellschafts-form__description--gmbh">
+            Desc
+            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gmbh">Gruendung</div>
+            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gmbh">Vertrag</div>
+            <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--gmbh">Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gmbh"
+            >Führung</div>
+            <div class="gesellschafts-form__haftung gesellschafts-form__haftung--gmbh">Haftung</div>
+          </div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--ag">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--ag"
           >Aktiengesellschaft (AG)</h3>
-          <div class="gesellschafts-form__description gesellschafts-form__description--ag">Desc</div>
+          <div class="gesellschafts-form__description gesellschafts-form__description--ag">
+            Desc
+            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--ag">Gruendung</div>
+            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ag">Vertrag</div>
+            <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--ag">Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--ag"
+            >Führung</div>
+            <div class="gesellschafts-form__haftung gesellschafts-form__haftung--ag">Haftung</div>
+          </div>
         </div>
       </div>
 
@@ -106,7 +151,24 @@
           >Der "GmbH &amp; Co. KG" cheat</h3>
           <div
             class="gesellschafts-form__description gesellschafts-form__description--gmbh-and-co-kg"
-          >Desc</div>
+          >
+            Desc
+            <div
+              class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gmbh-and-co-kg"
+            >Gruendung</div>
+            <div
+              class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gmbh-and-co-kg"
+            >Vertrag</div>
+            <gesellschafts-form__finanzierung
+              class="gesellschafts-form__finanzierung--gmbh-and-co-kg"
+            >Finanz</gesellschafts-form__finanzierung>
+            <div
+              class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gmbh-and-co-kg"
+            >Führung</div>
+            <div
+              class="gesellschafts-form__haftung gesellschafts-form__haftung--gmbh-and-co-kg"
+            >Haftung</div>
+          </div>
         </div>
       </div>
     </div>
