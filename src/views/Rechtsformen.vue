@@ -91,8 +91,15 @@
       </div>
 
       <div class="rechtsform rechtsform--both">
-        <h2>Der "GmbH &amp; Co. KG" cheat</h2>
-        <p>Jetzt will natürlich niemand für irgendwas haften und trotzdem mehr Kapital.</p>
+        <h2 class="rechtsform__header rechtsform__header--both">Die Mischung</h2>
+        <div class="rechtsform__description rechtsform__description--einzelunternehmen">
+          <p>Jetzt will natürlich niemand für irgendwas haften und trotzdem mehr Kapital.</p>
+        </div>
+        <div class="gesellschafts-form gesellschafts-form--gmbh-and-co-kg">
+          <h3
+            class="gesellschafts-form__header gesellschafts-form__header--gmbh-and-co-kg"
+          >Der "GmbH &amp; Co. KG" cheat</h3>
+        </div>
       </div>
     </div>
   </div>
