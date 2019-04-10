@@ -79,11 +79,6 @@ export default {
       showKredit: false
     };
   },
-  computed: {
-    a: function() {
-      return 0;
-    }
-  },
   methods: {
     selectEC: function() {
       this.showEC = true;

@@ -9,6 +9,7 @@ const Entgeldabrechnung = () => import("./views/EntgeldAbrechnung.vue");
 const Sampling = () => import("./views/Sampling.vue");
 const ABCAnalyse = () => import("./views/ABCAnalyse.vue");
 const Zahlungsarten = () => import("./views/Zahlungsarten.vue");
+const Rechtsformen = () => import("./views/Rechtsformen.vue");
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
       path: "/zahlungsarten",
       name: "zahlungsarten",
       component: Zahlungsarten
+    },
+    {
+      path: "/rechtsformen",
+      name: "rechtsformen",
+      component: Rechtsformen
     }
   ]
 });

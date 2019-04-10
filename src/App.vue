@@ -9,7 +9,8 @@
       <router-link to="/linuxuser">Linuxuser</router-link>|
       <router-link to="/sampling">Sampling</router-link>|
       <router-link to="/abcanalyse">ABCAnalyse</router-link>|
-      <router-link to="/zahlungsarten">Zahlungsarten</router-link>
+      <router-link to="/zahlungsarten">Zahlungsarten</router-link>|
+      <router-link to="/rechtsformen">Rechtsformen</router-link>
     </div>
     <router-view/>
   </div>
