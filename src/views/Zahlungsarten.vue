@@ -26,7 +26,7 @@
         <p>Da bei erfoglreicher Kontrolle die Zahlung umgehend erfolgt, genießt der Händer eine Zahlungsgarantie</p>
       </div>
       <div class="content__subsection content__subsection--costs">
-        <p>Es werden 0.03% der Kaufsumme aber mindestens 0.08€ je Zahlungsvorgang als Provision vond er bank einbehalten.</p>
+        <p>Es werden 0.3% der Kaufsumme aber mindestens 0.08€ je Zahlungsvorgang als Provision vond er bank einbehalten.</p>
       </div>
     </div>
     <div class="content content--elv" :class="{ show: showElv }">
