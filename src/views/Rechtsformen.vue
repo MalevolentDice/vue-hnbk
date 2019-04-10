@@ -61,9 +61,12 @@
             class="gesellschafts-form__header gesellschafts-form__header--gbr"
           >Gesellschaft bürgerlichen Rechts (GbR)</h3>
           <div class="gesellschafts-form__description gesellschafts-form__description--gbr">
-            Desc
-            <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gbr">Gruendung</div>
-            <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gbr">Vertrag</div>
+            <div
+              class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gbr"
+            >An der Gründung einer Gesellschaft bürgerlichen Rechts müssen mindestens zwei Gesellschafter beteiligt sein.</div>
+            <div
+              class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gbr"
+            >Der Vertrag kann formlos erfolgen und die Gesellschafter, welche sich auf das Fördern eines gemeinsamen Zeiles einigen, dürfen keine Kaufleute sein.</div>
             <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--gbr">Finanz</gesellschafts-form__finanzierung>
             <div
               class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gbr"
@@ -76,7 +79,6 @@
             class="gesellschafts-form__header gesellschafts-form__header--ohg"
           >Offene Handelsgesellschaft (OHG)</h3>
           <div class="gesellschafts-form__description gesellschafts-form__description--ohg">
-            Desc
             <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--ohg">Gruendung</div>
             <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ohg">Vertrag</div>
             <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--ohg">Finanz</gesellschafts-form__finanzierung>
@@ -91,7 +93,6 @@
             class="gesellschafts-form__header gesellschafts-form__header--kg"
           >Kommanditgesellschaft (KG)</h3>
           <div class="gesellschafts-form__description gesellschafts-form__description--kg">
-            Desc
             <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--kg">Gruendung</div>
             <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--kg">Vertrag</div>
             <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--kg">Finanz</gesellschafts-form__finanzierung>
@@ -113,7 +114,6 @@
             class="gesellschafts-form__header gesellschafts-form__header--gmbh"
           >Gesellschaft mit beschränkter Haftung (GmbH)</h3>
           <div class="gesellschafts-form__description gesellschafts-form__description--gmbh">
-            Desc
             <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gmbh">Gruendung</div>
             <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gmbh">Vertrag</div>
             <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--gmbh">Finanz</gesellschafts-form__finanzierung>
@@ -128,7 +128,6 @@
             class="gesellschafts-form__header gesellschafts-form__header--ag"
           >Aktiengesellschaft (AG)</h3>
           <div class="gesellschafts-form__description gesellschafts-form__description--ag">
-            Desc
             <div class="gesellschafts-form__gruendung gesellschafts-form__gruendung--ag">Gruendung</div>
             <div class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ag">Vertrag</div>
             <gesellschafts-form__finanzierung class="gesellschafts-form__finanzierung--ag">Finanz</gesellschafts-form__finanzierung>
@@ -152,7 +151,6 @@
           <div
             class="gesellschafts-form__description gesellschafts-form__description--gmbh-and-co-kg"
           >
-            Desc
             <div
               class="gesellschafts-form__gruendung gesellschafts-form__gruendung--gmbh-and-co-kg"
             >Gruendung</div>
