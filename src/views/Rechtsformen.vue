@@ -60,16 +60,19 @@
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--gbr"
           >Gesellschaft bürgerlichen Rechts (GbR)</h3>
+          <div class="gesellschafts-form__description gesellschafts-form__description--gbr">Desc</div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--ohg">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--ohg"
           >Offene Handelsgesellschaft (OHG)</h3>
+          <div class="gesellschafts-form__description gesellschafts-form__description--ohg">Desc</div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--kg">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--kg"
           >Kommanditgesellschaft (KG)</h3>
+          <div class="gesellschafts-form__description gesellschafts-form__description--kg">Desc</div>
         </div>
       </div>
 
@@ -82,11 +85,13 @@
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--gmbh"
           >Gesellschaft mit beschränkter Haftung (GmbH)</h3>
+          <div class="gesellschafts-form__description gesellschafts-form__description--gmbh">Desc</div>
         </div>
         <div class="gesellschafts-form gesellschafts-form--ag">
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--ag"
           >Aktiengesellschaft (AG)</h3>
+          <div class="gesellschafts-form__description gesellschafts-form__description--ag">Desc</div>
         </div>
       </div>
 
@@ -99,6 +104,9 @@
           <h3
             class="gesellschafts-form__header gesellschafts-form__header--gmbh-and-co-kg"
           >Der "GmbH &amp; Co. KG" cheat</h3>
+          <div
+            class="gesellschafts-form__description gesellschafts-form__description--gmbh-and-co-kg"
+          >Desc</div>
         </div>
       </div>
     </div>
