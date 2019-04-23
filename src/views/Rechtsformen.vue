@@ -7,12 +7,12 @@
         <div class="rechtsform__description rechtsform__description--einzelunternehmen">
           <p>
             Die Einzelunternehmung wird von
-            <b>einer Person</b> betrieben, die das Eigenkapital
-            <b>allein</b> aufbringt.
+            <strong>einer Person</strong> betrieben, die das Eigenkapital
+            <strong>allein</strong> aufbringt.
           </p>
           <p>
             Die Firma
-            <b>muss</b> den Zusatz "eingetragene(r) Kauf(frau/mann)" (e.Kfr. bzw e.K.) tragen.
+            <strong>muss</strong> den Zusatz "eingetragene(r) Kauf(frau/mann)" (e.Kfr. bzw e.K.) tragen.
           </p>
           <div class="law-quote">
             <div class="law-quote__section">$ 18 HGB</div>
@@ -27,25 +27,25 @@
           </div>
           <p>
             Die Gründung erfolgt
-            <b>formlos</b>.
+            <strong>formlos</strong>.
           </p>
           <p>
             Falls es sich um ein
-            <b>Handelsgewerbe</b> nach $1 HGB handelt, ist eine Eintragung in das Handelsregister erforderlich.
+            <strong>Handelsgewerbe</strong> nach $1 HGB handelt, ist eine Eintragung in das Handelsregister erforderlich.
           </p>
           <p>Da der Einzelunternehmer für die Verbindlichkeiten seines Unternehmens allein und unbeschränkt, d.h. mit seinem gesamten Vermögen, haftet, gestaltet sich die Fremdkapitalbeschaffung potentiell schwierig. Außerdem lässt sich das Eigenkapital ausschließlich durch einbehalten erzielter Gewinne erhöhen.</p>
           <p></p>
           <p>
             Da der Einzelunternehmer
-            <b>sämtliche Risiken</b> trägt, steht Ihm der
-            <b>gesamte Gewinn</b> zu und er trägt
-            <b>sämtliche Verluste</b> allein.
+            <strong>sämtliche Risiken</strong> trägt, steht Ihm der
+            <strong>gesamte Gewinn</strong> zu und er trägt
+            <strong>sämtliche Verluste</strong> allein.
           </p>
           <p>
             Ebenso besitzt der Einzelunternehmer
-            <b>sämtliche Entscheidungsbefugnisse</b>. Er hat das alleinige Recht, im Innenverhältnis die Geschäfte zu führen
-            <b>(Geschäftsführungsbefugnis)</b> und das Unternehmen im Außenverhältnis gegenüber Dritten zu vertreten
-            <b>(Vertretungsbefugnis)</b>.
+            <strong>sämtliche Entscheidungsbefugnisse</strong>. Er hat das alleinige Recht, im Innenverhältnis die Geschäfte zu führen
+            <strong>(Geschäftsführungsbefugnis)</strong> und das Unternehmen im Außenverhältnis gegenüber Dritten zu vertreten
+            <strong>(Vertretungsbefugnis)</strong>.
           </p>
         </div>
       </div>
