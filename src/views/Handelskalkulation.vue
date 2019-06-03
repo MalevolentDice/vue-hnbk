@@ -25,6 +25,7 @@
                             <input type="price" v-model.number="listeneinkaufspreis">
                         </td>
                         <td>100</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -75,6 +76,7 @@
                         <td>Bezugspreis</td>
                         <td>{{ bezugspreis }}</td>
                         <td>100</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>8</td>
@@ -84,6 +86,7 @@
                         <td>
                             <input type="number form-control" v-model.number="handlungskosten">
                         </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>9</td>
@@ -119,6 +122,7 @@
                         <td>
                             <input type="number form-control" v-model.number="kundenskonto">
                         </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td>13</td>
