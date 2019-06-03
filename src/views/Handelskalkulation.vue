@@ -128,16 +128,27 @@
                         <td>13</td>
                         <td>=</td>
                         <td>Zielverkaufspreis</td>
+                        <td>{{ zielverkaufspreis }}</td>
+                        <td>100</td>
+                        <td>{{ zielverkaufspreisInPercent }}</td>
                     </tr>
                     <tr>
                         <td>14</td>
                         <td>+</td>
                         <td>Kundenrabatt</td>
+                        <td>{{ kundenrabattBetrag }}</td>
+                        <td></td>
+                        <td>
+                            <input type="number" v-model.number="kundenrabatt">
+                        </td>
                     </tr>
                     <tr>
                         <td>15</td>
                         <td>=</td>
                         <td>Listenverkaufspreis</td>
+                        <td>{{ listenverkaufspreis }}</td>
+                        <td></td>
+                        <td>100</td>
                     </tr>
                 </tbody>
             </table>
@@ -156,7 +167,8 @@ export default {
             bezugskosten: 122,
             handlungskosten: 20,
             gewinn: 6,
-            kundenskonto: 3
+            kundenskonto: 3,
+            kundenrabatt: 10
         };
     },
     computed: {
@@ -214,9 +226,31 @@ export default {
         },
         kundenskontoBetrag() {
             return (
-                (this.kundenskonto / this.barverkaufspreisInPercent) *
-                this.barverkaufspreis
+                this.barverkaufspreis *
+                (this.kundenskonto / this.barverkaufspreisInPercent)
             ).toFixed(2);
+        },
+        zielverkaufspreis() {
+            return (+this.barverkaufspreis + +this.kundenskontoBetrag).toFixed(
+                2
+            );
+        },
+        zielverkaufspreisInPercent() {
+            return 100 - this.kundenrabatt;
+        },
+        kundenrabattInPercent() {
+            return (this.kundenrabatt / 100).toFixed(2);
+        },
+        kundenrabattBetrag() {
+            return (
+                this.zielverkaufspreis *
+                (this.kundenrabatt / this.zielverkaufspreisInPercent)
+            ).toFixed(2);
+        },
+        listenverkaufspreis() {
+            return (+this.zielverkaufspreis + +this.kundenrabattBetrag).toFixed(
+                2
+            );
         }
     }
 };
