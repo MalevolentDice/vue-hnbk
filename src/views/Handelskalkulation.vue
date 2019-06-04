@@ -24,16 +24,22 @@
                 v-show="showVorwaerts"
                 class="kalkulations-verfahren__vorwaertskalkulation"
             />
+            <Rueckwaertskalkulation
+                v-show="showRueckwaerts"
+                class="kalkulations-verfahren__rueckwaertskalkulation"
+            />
         </div>
     </div>
 </template>
 
 <script>
 import Vorwaertskalkulation from "../components/Vorwaertskalkulation";
+import Rueckwaertskalkulation from "../components/Rueckwaertskalkulation";
 export default {
     name: "handelskalkulation",
     components: {
-        Vorwaertskalkulation
+        Vorwaertskalkulation,
+        Rueckwaertskalkulation
     },
     data: function() {
         return {
