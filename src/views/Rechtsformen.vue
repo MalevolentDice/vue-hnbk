@@ -74,9 +74,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gbr"
                         >Der Vertrag kann formlos erfolgen und die Gesellschafter, welche sich auf das Fördern eines gemeinsamen Zeiles einigen, dürfen keine Kaufleute sein.</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--gbr"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--gbr"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gbr"
                         >Führung</div>
@@ -98,9 +98,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ohg"
                         >Vertrag</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--ohg"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--ohg"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--ohg"
                         >Führung</div>
@@ -122,9 +122,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--kg"
                         >Vertrag</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--kg"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--kg"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--kg"
                         >Führung</div>
@@ -155,9 +155,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gmbh"
                         >Vertrag</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--gmbh"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--gmbh"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gmbh"
                         >Führung</div>
@@ -179,9 +179,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--ag"
                         >Vertrag</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--ag"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--ag"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--ag"
                         >Führung</div>
@@ -210,9 +210,9 @@
                         <div
                             class="gesellschafts-form__vertrag gesellschafts-form__vertrag--gmbh-and-co-kg"
                         >Vertrag</div>
-                        <gesellschafts-form__finanzierung
-                            class="gesellschafts-form__finanzierung--gmbh-and-co-kg"
-                        >Finanz</gesellschafts-form__finanzierung>
+                        <div
+                            class="gesellschafts-form__finanzierung gesellschafts-form__finanzierung--gmbh-and-co-kg"
+                        >Finanz</div>
                         <div
                             class="gesellschafts-form__geschaefts-fuehrung gesellschafts-form__geschaefts-fuehrung--gmbh-and-co-kg"
                         >Führung</div>
