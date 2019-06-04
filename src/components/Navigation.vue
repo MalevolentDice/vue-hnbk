@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg nav-tabs">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <a class="navbar-brand" href="#">
                 <img class="logo" src="@/assets/logo.png" alt="Logo">
             </a>
