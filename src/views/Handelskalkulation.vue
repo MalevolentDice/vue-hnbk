@@ -7,17 +7,17 @@
         <button
             v-show="!showVorwaerts"
             class="choice choice__vorwaerts btn btn-dark"
-            @click="toggleVorwaerts"
+            @click="toggleView('showVorwaerts')"
         >Vorwärtskalkulation</button>
         <button
             v-show="!showRueckwaerts"
             class="choice choice__rueckwaerts btn btn-dark"
-            @click="toggleRueckwaerts"
+            @click="toggleView('showRueckwaerts')"
         >Rückwärtskalkulation</button>
         <button
             v-show="!showDifferenz"
             class="choice choice__differenz btn btn-dark"
-            @click="toggleDifferenz"
+            @click="toggleView('showDifferenz')"
         >Differenzkalkulation</button>
         <div class="kalkulations-verfahren">
             <Vorwaertskalkulation
@@ -49,20 +49,11 @@ export default {
         };
     },
     methods: {
-        toggleVorwaerts() {
-            this.showVorwaerts = true;
-            this.showRueckwaerts = false;
-            this.showDifferenz = false;
-        },
-        toggleRueckwaerts() {
-            this.showVorwaerts = false;
-            this.showRueckwaerts = true;
-            this.showDifferenz = false;
-        },
-        toggleDifferenz() {
+        toggleView(view) {
             this.showVorwaerts = false;
             this.showRueckwaerts = false;
-            this.showDifferenz = true;
+            this.showDifferenz = false;
+            this[view] = true;
         }
     }
 };
