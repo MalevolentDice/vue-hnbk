@@ -40,7 +40,7 @@
                         <td>=</td>
                         <td>Zieleinkaufspreis</td>
                         <td>{{ zieleinkaufspreis }}</td>
-                        <td>{{ 100 - lieferrabatt }}</td>
+                        <td>{{ zieleinkaufspreisInPercent }}</td>
                         <td>100</td>
                     </tr>
                     <tr>
@@ -59,7 +59,7 @@
                         <td>Bareinkaufspreis</td>
                         <td>{{ bareinkaufspreis }}</td>
                         <td></td>
-                        <td>{{ 100 - lieferskonto }}</td>
+                        <td>{{ bareinkaufspreisInPercent }}</td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -99,7 +99,7 @@
                         <td>10</td>
                         <td>+</td>
                         <td>Gewinn</td>
-                        <td>{{gewinnbetrag}}</td>
+                        <td>{{gewinnBetrag}}</td>
                         <td></td>
                         <td>
                             <input type="number form-control" v-model.number="gewinn">
@@ -204,6 +204,63 @@ export default {
         },
         barverkaufspreisInPercent() {
             return (100 - this.kundenskonto).toFixed(2);
+        },
+        gewinnDivision() {
+            return this.gewinn / (100 + this.gewinn);
+        },
+        gewinnBetrag() {
+            return (this.barverkaufspreis * this.gewinnDivision).toFixed(2);
+        },
+        selbstkostenpreis() {
+            return (this.barverkaufspreis - this.gewinnBetrag).toFixed(2);
+        },
+        handlungskostenDivision() {
+            return this.handlungskosten / (100 + this.handlungskosten);
+        },
+        handlungskostenBetrag() {
+            return (
+                this.selbstkostenpreis * this.handlungskostenDivision
+            ).toFixed(2);
+        },
+        bezugspreis() {
+            return (
+                this.selbstkostenpreis - this.handlungskostenBetrag
+            ).toFixed(2);
+        },
+        bareinkaufspreisInPercent() {
+            return 100 - this.lieferskonto;
+        },
+        bareinkaufspreis() {
+            return (this.bezugspreis - this.bezugskosten).toFixed(2);
+        },
+        lieferskontoDivision() {
+            return this.lieferskonto / this.bareinkaufspreisInPercent;
+        },
+        lieferskontoBetrag() {
+            return (this.bareinkaufspreis * this.lieferskontoDivision).toFixed(
+                2
+            );
+        },
+        zieleinkaufspreis() {
+            return (+this.bareinkaufspreis + +this.lieferskontoBetrag).toFixed(
+                2
+            );
+        },
+        zieleinkaufspreisInPercent() {
+            return 100 - this.lieferrabatt;
+        },
+        lieferrabattDivision() {
+            return this.lieferrabatt / this.zieleinkaufspreisInPercent;
+        },
+        lieferrabattBetrag() {
+            return (
+                +this.zieleinkaufspreis * +this.lieferrabattDivision
+            ).toFixed(2);
+        },
+        listeneinkaufspreis() {
+            return (+this.zieleinkaufspreis + +this.lieferrabattBetrag).toFixed(
+                2
+            );
         }
     }
 };
