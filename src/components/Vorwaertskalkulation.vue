@@ -173,83 +173,117 @@ export default {
     },
     computed: {
         lieferrabattInPercent() {
-            return (this.lieferrabatt / 100).toFixed(2);
+            return Math.round((this.lieferrabatt / 100) * 1e4) / 1e4;
         },
         lieferrabattBetrag() {
             return (
-                this.lieferrabattInPercent * this.listeneinkaufspreis
-            ).toFixed(2);
+                Math.round(
+                    this.lieferrabattInPercent * this.listeneinkaufspreis * 1e2
+                ) / 1e2
+            );
         },
         zieleinkaufspreis() {
-            return (this.listeneinkaufspreis - this.lieferrabattBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.listeneinkaufspreis - this.lieferrabattBetrag) * 1e2
+                ) / 1e2
             );
         },
         lieferskontoInPercent() {
-            return (this.lieferskonto / 100).toFixed(2);
+            return Math.round((this.lieferskonto / 100) * 1e4) / 1e4;
         },
         lieferskontoBetrag() {
             return (
-                this.zieleinkaufspreis * this.lieferskontoInPercent
-            ).toFixed(2);
+                Math.round(
+                    this.zieleinkaufspreis * this.lieferskontoInPercent * 1e2
+                ) / 1e2
+            );
         },
         bareinkaufspreis() {
-            return (this.zieleinkaufspreis - this.lieferskontoBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.zieleinkaufspreis - this.lieferskontoBetrag) * 1e2
+                ) / 1e2
             );
         },
         bezugspreis() {
-            return (+this.bareinkaufspreis + +this.bezugskosten).toFixed(2);
+            return (
+                Math.round((this.bareinkaufspreis + this.bezugskosten) * 1e2) /
+                1e2
+            );
         },
         handlungskostenInPercent() {
-            return (this.handlungskosten / 100).toFixed(2);
+            return Math.round((this.handlungskosten / 100) * 1e4) / 1e4;
         },
         handlungskostenBetrag() {
-            return (this.bezugspreis * this.handlungskostenInPercent).toFixed(
-                2
+            return (
+                Math.round(
+                    this.bezugspreis * this.handlungskostenInPercent * 1e2
+                ) / 1e2
             );
         },
         selbstkostenpreis() {
-            return (+this.bezugspreis + +this.handlungskostenBetrag).toFixed(2);
+            return (
+                Math.round(
+                    (this.bezugspreis + this.handlungskostenBetrag) * 1e2
+                ) / 1e2
+            );
         },
         gewinnInPercent() {
-            return (this.gewinn / 100).toFixed(2);
+            return Math.round((this.gewinn / 100) * 1e4) / 1e4;
         },
         gewinnbetrag() {
-            return (this.selbstkostenpreis * this.gewinnInPercent).toFixed(2);
+            return (
+                Math.round(
+                    this.selbstkostenpreis * this.gewinnInPercent * 1e2
+                ) / 1e2
+            );
         },
         barverkaufspreis() {
-            return (+this.selbstkostenpreis + +this.gewinnbetrag).toFixed(2);
+            return (
+                Math.round((this.selbstkostenpreis + this.gewinnbetrag) * 1e2) /
+                1e2
+            );
         },
         barverkaufspreisInPercent() {
             return 100 - this.kundenskonto;
         },
         kundenskontoBetrag() {
             return (
-                this.barverkaufspreis *
-                (this.kundenskonto / this.barverkaufspreisInPercent)
-            ).toFixed(2);
+                Math.round(
+                    this.barverkaufspreis *
+                        (this.kundenskonto / this.barverkaufspreisInPercent) *
+                        1e2
+                ) / 1e2
+            );
         },
         zielverkaufspreis() {
-            return (+this.barverkaufspreis + +this.kundenskontoBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.barverkaufspreis + this.kundenskontoBetrag) * 1e2
+                ) / 1e2
             );
         },
         zielverkaufspreisInPercent() {
             return 100 - this.kundenrabatt;
         },
         kundenrabattInPercent() {
-            return (this.kundenrabatt / 100).toFixed(2);
+            return Math.round((this.kundenrabatt / 100) * 1e4) / 1e4;
         },
         kundenrabattBetrag() {
             return (
-                this.zielverkaufspreis *
-                (this.kundenrabatt / this.zielverkaufspreisInPercent)
-            ).toFixed(2);
+                Math.round(
+                    this.zielverkaufspreis *
+                        (this.kundenrabatt / this.zielverkaufspreisInPercent) *
+                        1e2
+                ) / 1e2
+            );
         },
         listenverkaufspreis() {
-            return (+this.zielverkaufspreis + +this.kundenrabattBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.zielverkaufspreis + this.kundenrabattBetrag) * 1e2
+                ) / 1e2
             );
         }
     }
