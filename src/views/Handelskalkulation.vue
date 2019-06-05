@@ -28,6 +28,10 @@
                 v-show="showRueckwaerts"
                 class="kalkulations-verfahren__rueckwaertskalkulation"
             />
+            <Differenzkalkulation
+                v-show="showDifferenz"
+                class="kalkulations-verfahren__rueckwaertskalkulation"
+            />
         </div>
     </div>
 </template>
@@ -35,11 +39,13 @@
 <script>
 import Vorwaertskalkulation from "../components/Vorwaertskalkulation";
 import Rueckwaertskalkulation from "../components/Rueckwaertskalkulation";
+import Differenzkalkulation from "../components/Differenzkalkulation";
 export default {
     name: "handelskalkulation",
     components: {
         Vorwaertskalkulation,
-        Rueckwaertskalkulation
+        Rueckwaertskalkulation,
+        Differenzkalkulation
     },
     data: function() {
         return {
