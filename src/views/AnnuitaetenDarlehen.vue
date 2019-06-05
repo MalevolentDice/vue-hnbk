@@ -78,13 +78,16 @@ export default {
     },
     methods: {
         getZinsenValue(debt) {
-            return (debt * (this.zinsen / 100)).toFixed(2);
+            return Math.round(debt * (this.zinsen / 100) * 1e2) / 1e2;
         },
         getTilgungValue(debt) {
-            return (this.anno - this.getZinsenValue(debt)).toFixed(2);
+            return (
+                Math.round((this.anno - this.getZinsenValue(debt)) * 1e2) / 1e2
+            );
         },
         getdebtAtEndOfYear(debt) {
-            let debtLocal = (debt - this.getTilgungValue(debt)).toFixed(2);
+            let debtLocal =
+                Math.round((debt - this.getTilgungValue(debt)) * 1e2) / 1e2;
             return debtLocal > 0 ? debtLocal : 0;
         }
     }
