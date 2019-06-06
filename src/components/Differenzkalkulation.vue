@@ -2,8 +2,8 @@
     <div class="differenzkalkulation">
         <div class="description">
             <h1>Differenzkalkulation</h1>
-            <h2>WORK IN PROGRESS</h2>
-            <p>aaa</p>
+            <p>Bei der Differenzkalkulation ermitteln wir den erwirtschaftbaren Gewinn bei gegebenen Listenein- und verkaufspreisen.</p>
+            <p>Es wird vom Listeneinkaufspreis bis zum Selbstkostenpreis vorwärts gerechnet (Vorwärtskalkulation) und vom Listenverkaufspreis bis zum Barverkaufspreis rückwärts gerechnet (Rückwärtskalkulation).</p>
         </div>
         <div class="table-responsive calculation">
             <table class="table table-striped table-dark">
@@ -101,11 +101,9 @@
                         <td>10</td>
                         <td>+</td>
                         <td>Gewinn</td>
-                        <td>{{gewinnbetrag}}</td>
+                        <td>{{ gewinnBetrag }}</td>
                         <td></td>
-                        <td>
-                            <input type="number form-control" v-model.number="gewinn">
-                        </td>
+                        <td>{{ gewinn }}</td>
                     </tr>
                     <tr>
                         <td>11</td>
@@ -113,7 +111,7 @@
                         <td>Barverkaufspreis</td>
                         <td>{{ barverkaufspreis }}</td>
                         <td>{{ barverkaufspreisInPercent }}</td>
-                        <td>{{ 100 + gewinn }}</td>
+                        <td>{{ barverkaufspreisInPercent2 }}</td>
                     </tr>
                     <tr>
                         <td>12</td>
@@ -147,7 +145,9 @@
                         <td>15</td>
                         <td>=</td>
                         <td>Listenverkaufspreis</td>
-                        <td>{{ listenverkaufspreis }}</td>
+                        <td>
+                            <input type="price" v-model.number="listenverkaufspreis">
+                        </td>
                         <td></td>
                         <td>100</td>
                     </tr>
@@ -204,6 +204,25 @@ export default {
         },
         barverkaufspreisInPercent() {
             return (100 - this.kundenskonto).toFixed(2);
+        },
+        barverkaufspreisInPercent2() {
+            return (
+                Math.round(
+                    (this.barverkaufspreis / this.selbstkostenpreis) * 100 * 1e2
+                ) / 1e2
+            );
+        },
+        gewinnBetrag() {
+            return (
+                Math.round(
+                    (this.barverkaufspreis - this.selbstkostenpreis) * 1e2
+                ) / 1e2
+            );
+        },
+        gewinn() {
+            return (
+                Math.round((this.barverkaufspreisInPercent2 - 100) * 1e2) / 1e2
+            );
         },
         lieferrabattInPercent() {
             return Math.round((this.lieferrabatt / 100) * 1e4) / 1e4;
