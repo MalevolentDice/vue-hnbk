@@ -174,36 +174,44 @@ export default {
     },
     computed: {
         kundenrabattInPercent() {
-            return (this.kundenrabatt / 100).toFixed(2);
+            return Math.round((this.kundenrabatt / 100) * 1e2) / 1e2;
         },
         kundenrabattBetrag() {
             return (
-                this.kundenrabattInPercent * this.listenverkaufspreis
-            ).toFixed(2);
+                Math.round(
+                    this.kundenrabattInPercent * this.listenverkaufspreis * 1e2
+                ) / 1e2
+            );
         },
         zielverkaufspreisInPercent() {
-            return (100 - this.kundenrabatt).toFixed(2);
+            return Math.round((100 - this.kundenrabatt) * 1e2) / 1e2;
         },
         zielverkaufspreis() {
-            return (this.listenverkaufspreis - this.kundenrabattBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.listenverkaufspreis - this.kundenrabattBetrag) * 1e2
+                ) / 1e2
             );
         },
         kundenskontoInPercent() {
-            return (this.kundenskonto / 100).toFixed(2);
+            return Math.round((this.kundenskonto / 100) * 1e2) / 1e2;
         },
         kundenskontoBetrag() {
             return (
-                this.kundenskontoInPercent * this.zielverkaufspreis
-            ).toFixed(2);
+                Math.round(
+                    this.kundenskontoInPercent * this.zielverkaufspreis * 1e2
+                ) / 1e2
+            );
         },
         barverkaufspreis() {
-            return (this.zielverkaufspreis - this.kundenskontoBetrag).toFixed(
-                2
+            return (
+                Math.round(
+                    (this.zielverkaufspreis - this.kundenskontoBetrag) * 1e2
+                ) / 1e2
             );
         },
         barverkaufspreisInPercent() {
-            return (100 - this.kundenskonto).toFixed(2);
+            return Math.round((100 - this.kundenskonto) * 1e2) / 1e2;
         },
         barverkaufspreisInPercent2() {
             return (
