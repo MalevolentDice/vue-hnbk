@@ -1,7 +1,7 @@
 <template>
     <div class="rueckwaertskalkulation">
         <div class="description">
-            <h1>Rückwärtskalkulation</h1>
+            <Heading first="Rückwärts" second="kalkulation"></Heading>
             <p>Bei der Rückwärtskalkulation ermitteln wir, für wieviel wir ein Produkt erwerben müssen, um bei gegebenem Preis der Konkurrenz und Aufwand den gewünschten prozentualen Gewinn zu erwirtschaften.</p>
         </div>
         <div class="table-responsive calculation">
@@ -157,8 +157,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "vorwaertskalkulation",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             listenverkaufspreis: 1640,
