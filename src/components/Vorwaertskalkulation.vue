@@ -1,7 +1,7 @@
 <template>
     <div class="vorwaertskalkulation">
         <div class="description">
-            <h1>Vorwärtskalkulation</h1>
+            <Heading first="Vorwärts" second="kalkulation"></Heading>
             <p>Bei der Vorwärtskalkulation ermitteln wir, für wieviel wir ein Produkt verkaufen müssen, um bei gegebenem Preis und Aufwand den gewünschten prozentualen Gewinn zu erwirtschaften.</p>
         </div>
         <div class="table-responsive calculation">
@@ -157,6 +157,7 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "vorwaertskalkulation",
     data: function() {
@@ -170,6 +171,9 @@ export default {
             kundenskonto: 3,
             kundenrabatt: 10
         };
+    },
+    components: {
+        Heading
     },
     computed: {
         lieferrabattInPercent() {

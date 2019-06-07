@@ -1,7 +1,7 @@
 <template>
     <div class="handelskalkulation">
         <div class="description">
-            <h1>Handelskalkulation</h1>
+            <Heading first="Handels" second="kalkulation"></Heading>
             <p>Die Handelskalkulation dient je nach Unternehmens- und Marktsituation der Ermittlung des Einkaufpreises (Rückwärtskalkulation), Verkaufspreises (Vorwärtskalkulation) oder möglichen Gewinns (Differenzkalkulation).</p>
         </div>
         <button
@@ -40,12 +40,14 @@
 import Vorwaertskalkulation from "../components/Vorwaertskalkulation";
 import Rueckwaertskalkulation from "../components/Rueckwaertskalkulation";
 import Differenzkalkulation from "../components/Differenzkalkulation";
+import Heading from "../components/typography/Heading";
 export default {
     name: "handelskalkulation",
     components: {
         Vorwaertskalkulation,
         Rueckwaertskalkulation,
-        Differenzkalkulation
+        Differenzkalkulation,
+        Heading
     },
     data: function() {
         return {
