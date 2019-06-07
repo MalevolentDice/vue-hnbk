@@ -18,9 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li v-for="route in routes" :key="route.name" class="nav-item">
-                        <!-- <a class="nav-link" href="#"> -->
                         <router-link class="nav-link" :to="route.link">{{route.name}}</router-link>
-                        <!-- </a> -->
                     </li>
                 </ul>
             </div>
