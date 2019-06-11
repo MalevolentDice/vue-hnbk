@@ -112,7 +112,6 @@ export default {
 }
 
 .selector {
-    /* max-width: 100vw; */
     display: grid;
     grid-template-areas: "a b c";
 }
