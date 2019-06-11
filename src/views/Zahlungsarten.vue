@@ -3,17 +3,17 @@
         <div class="selector">
             <button
                 class="button button--ec"
-                @click="selectEC"
+                @click="toggleSelect('showEC')"
                 :class="{ 'button--selected': showEC }"
             >EC</button>
             <button
                 class="button button--elv"
-                @click="selectELV"
+                @click="toggleSelect('showElv')"
                 :class="{ 'button--selected': showElv }"
             >ELV</button>
             <button
                 class="button button--kredit"
-                @click="selectKredit"
+                @click="toggleSelect('showKredit')"
                 :class="{ 'button--selected': showKredit }"
             >Kreditkarte</button>
         </div>
@@ -34,13 +34,19 @@
             </div>
         </div>
         <div class="content content--elv" :class="{ show: showElv }">
-            <h1>Elektronisches Lastschriftverfahren</h1>
+            <h1>
+                Elektronisches
+                <Heading first="Lastschrift" second="verfahren"/>
+            </h1>
             <div class="content__subsection content__subsection--requirements">
                 <p>Der Kunde muss Inhaber einer Electronic Cash-Karte sein.</p>
             </div>
             <div class="content__subsection content__subsection--procedure">
                 <p>Beim auslesen des Magnetstreifens werden die Kundendaten gespeichert.</p>
-                <p>Die ermöglicht die automatische Erstellung von Einzugsermächtigungslastschriften.</p>
+                <p>
+                    Dies ermöglicht die automatische Erstellung von
+                    <Heading first="Einzugsermächtigungs" second="lastschriften"/>.
+                </p>
                 <p>Ihr Kunde stimmt der Abbuchung durch das Unterschreiben des Rechnungsbelegs zu.</p>
             </div>
             <div class="content__subsection content__subsection--advantages">
@@ -74,8 +80,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "zahlungsarten",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             showEC: true,
@@ -84,20 +94,11 @@ export default {
         };
     },
     methods: {
-        selectEC: function() {
-            this.showEC = true;
-            this.showElv = false;
-            this.showKredit = false;
-        },
-        selectELV: function() {
-            this.showEC = false;
-            this.showElv = true;
-            this.showKredit = false;
-        },
-        selectKredit: function() {
+        toggleSelect(view) {
             this.showEC = false;
             this.showElv = false;
-            this.showKredit = true;
+            this.showKredit = false;
+            this[view] = true;
         }
     }
 };
@@ -108,6 +109,12 @@ export default {
     grid-template-areas:
         "selector"
         "content";
+}
+
+.selector {
+    /* max-width: 100vw; */
+    display: grid;
+    grid-template-areas: "a b c";
 }
 
 .content {
@@ -142,7 +149,6 @@ export default {
     background-color: lightgray;
     border: 3px solid gray;
     height: 48px;
-    width: 33.33%;
 }
 
 .button--selected {
