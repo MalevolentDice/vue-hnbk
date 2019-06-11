@@ -1,7 +1,9 @@
 <template>
     <div class="handelskalkulation">
         <div class="description">
-            <Heading first="Handels" second="kalkulation"></Heading>
+            <h1>
+                <Heading first="Handels" second="kalkulation"></Heading>
+            </h1>
             <p>Die Handelskalkulation dient je nach Unternehmens- und Marktsituation der Ermittlung des Einkaufpreises (Rückwärtskalkulation), Verkaufspreises (Vorwärtskalkulation) oder möglichen Gewinns (Differenzkalkulation).</p>
         </div>
         <button

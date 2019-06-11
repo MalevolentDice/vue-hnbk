@@ -1,12 +1,12 @@
 <template>
-    <h1 class="heading">
+    <div class="heading">
         <div v-if="isMobile" class="heading__dash--break">
             {{first}}-
             <br>
             {{second}}
         </div>
         <div v-else class="heading__no--break">{{first}}{{second}}</div>
-    </h1>
+    </div>
 </template>
 <script>
 export default {

@@ -1,7 +1,9 @@
 <template>
     <div class="rueckwaertskalkulation">
         <div class="description">
-            <Heading first="Rückwärts" second="kalkulation"></Heading>
+            <h1>
+                <Heading first="Rückwärts" second="kalkulation"></Heading>
+            </h1>
             <p>Bei der Rückwärtskalkulation ermitteln wir, für wieviel wir ein Produkt erwerben müssen, um bei gegebenem Preis der Konkurrenz und Aufwand den gewünschten prozentualen Gewinn zu erwirtschaften.</p>
         </div>
         <div class="table-responsive calculation">

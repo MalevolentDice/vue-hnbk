@@ -1,7 +1,9 @@
 <template>
     <div class="entgeldabrechnung">
         <div class="description">
-            <h1>Die Entgeldabrechnung</h1>
+            <h1>
+                <Heading first="Entgeld" second="abrechnung"></Heading>
+            </h1>
             <p>Berechnet den Auszahlungsbetrag pro Monat anhand des Bruttoeinkommens</p>
             <p>
                 <u>
@@ -12,7 +14,10 @@
         </div>
 
         <div class="calculation">
-            <h2>Personenbezogene Daten</h2>
+            <h2>
+                <Heading first="Personen" second="bezogene"></Heading>
+                <div>Daten</div>
+            </h2>
             <div class="wrapper">
                 <label for="steuerklasse">Steuerklasse</label>
                 <select type="number" v-model="person.steuerklasse" id="steuerklasse">
@@ -111,8 +116,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "entgeldabrechnung",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             person: {

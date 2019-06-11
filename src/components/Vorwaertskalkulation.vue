@@ -1,7 +1,9 @@
 <template>
     <div class="vorwaertskalkulation">
         <div class="description">
-            <Heading first="Vorwärts" second="kalkulation"></Heading>
+            <h1>
+                <Heading first="Vorwärts" second="kalkulation"></Heading>
+            </h1>
             <p>Bei der Vorwärtskalkulation ermitteln wir, für wieviel wir ein Produkt verkaufen müssen, um bei gegebenem Preis und Aufwand den gewünschten prozentualen Gewinn zu erwirtschaften.</p>
         </div>
         <div class="table-responsive calculation">

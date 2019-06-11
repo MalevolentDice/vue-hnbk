@@ -1,7 +1,9 @@
 <template>
     <div class="kontokorrentkredit">
         <div class="description">
-            <Heading first="Konto" second="korrentkredit"/>
+            <h1>
+                <Heading first="Konto" second="korrentkredit"/>
+            </h1>
             <p>Beim Kontokorrentkredit erhält der Kontenbesitzer einen gewissen Kreditrahmen zur Verfügung.</p>
             <p>Genutzter Kreditrahmen wird mit dem Sollzins abgerechnet.</p>
             <p>Ungenutzter Kreditrahmen wird mit dem Kreditprovisionssatz abgerechnet.</p>
