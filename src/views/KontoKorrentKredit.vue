@@ -1,7 +1,7 @@
 <template>
     <div class="kontokorrentkredit">
         <div class="description">
-            <h1>Der Kontokorrentkredit</h1>
+            <Heading first="Konto" second="korrentkredit"/>
             <p>Beim Kontokorrentkredit erhält der Kontenbesitzer einen gewissen Kreditrahmen zur Verfügung.</p>
             <p>Genutzter Kreditrahmen wird mit dem Sollzins abgerechnet.</p>
             <p>Ungenutzter Kreditrahmen wird mit dem Kreditprovisionssatz abgerechnet.</p>
@@ -55,8 +55,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "kontokorrentkredit",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             kontostand: -60000,
