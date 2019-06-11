@@ -41,7 +41,8 @@ export default {
                 { link: "/ABCAnalyse", name: "ABCAnalyse" },
                 { link: "/Zahlungsarten", name: "Zahlungsarten" },
                 { link: "/Rechtsformen", name: "Rechtsformen" },
-                { link: "/handelskalkulation", name: "Handelskalkulation" }
+                { link: "/handelskalkulation", name: "Handelskalkulation" },
+                { link: "/skonto", name: "Skonto" }
             ]
         };
     }

@@ -14,7 +14,8 @@ const routerOptions = [
   { path: "/ABCAnalyse", view: "ABCAnalyse" },
   { path: "/Zahlungsarten", view: "Zahlungsarten" },
   { path: "/Rechtsformen", view: "Rechtsformen" },
-  { path: "/handelskalkulation", view: "Handelskalkulation" }
+  { path: "/handelskalkulation", view: "Handelskalkulation" },
+  { path: "/skonto", view: "Skonto" }
 ];
 
 const routes = routerOptions.map(route => {
