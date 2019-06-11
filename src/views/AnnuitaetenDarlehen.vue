@@ -1,7 +1,7 @@
 <template>
     <div class="annuitaetendarlehen">
         <div class="description">
-            <h1>Das Annuitätendarlehen</h1>
+            <Heading first="Annuitäten" second="darlehen"></Heading>
             <p>Beim Annuitätendarlehen wird jedes Jahr die Selbe Annuität vom Schuldner bezahlt.</p>
             <p>Da die Schuld und somit die Zinsen mit jeder Zahlung sinken, steigt der Tilgungsanteil der Annuität stetig an.</p>
             <p>In unserem Beispiel wird jährlich abgerechnet, in der wirtschaft ist eine monatliche Verrechnung üblicher.</p>
@@ -46,8 +46,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "annuitaetendarlehen",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             kredit: 140000,
