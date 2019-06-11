@@ -1,7 +1,9 @@
 <template>
     <div class="differenzkalkulation">
         <div class="description">
-            <h1>Differenzkalkulation</h1>
+            <h1>
+                <Heading first="Differenz" second="kalkulation"/>
+            </h1>
             <p>Bei der Differenzkalkulation ermitteln wir den erwirtschaftbaren Gewinn bei gegebenen Listenein- und verkaufspreisen.</p>
             <p>Es wird vom Listeneinkaufspreis bis zum Selbstkostenpreis vorwärts gerechnet (Vorwärtskalkulation) und vom Listenverkaufspreis bis zum Barverkaufspreis rückwärts gerechnet (Rückwärtskalkulation).</p>
         </div>
@@ -158,8 +160,12 @@
 </template>
 
 <script>
+import Heading from "../components/typography/Heading";
 export default {
     name: "differenzkalkulation",
+    components: {
+        Heading
+    },
     data: function() {
         return {
             listeneinkaufspreis: 1163.69,
