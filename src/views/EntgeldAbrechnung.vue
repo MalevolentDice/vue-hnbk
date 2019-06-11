@@ -68,10 +68,15 @@
                 <input type="number" v-model="vwlarbeitgeber" id="vwlarbeitgeber" max="40" min="0">
             </div>
 
-            <h2>Berechnungsschema</h2>
+            <h2>
+                <Heading first="Berechnungs" second="schema"/>
+            </h2>
             <div class="wrapper">
                 <label for="steuerbrutto">
-                    <h4>= sozialversicherungspflichtiges / steuerpflichtiges Bruttogehalt</h4>
+                    <h4>
+                        = <Heading first="sozial" second="versicherungs" />/
+                        <Heading first="steuer" second="pflichtiges"/>Bruttogehalt
+                    </h4>
                 </label>
                 <p>{{ steuerbrutto }}</p>
 
